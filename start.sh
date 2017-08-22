@@ -64,7 +64,7 @@ EOF
 options {
 	directory "/var/cache/bind";
         allow-recursion {127.0.0.1;};
-        allow-query-cache {127.0.0.1;};
+        forward only;
         allow-query {any;};
         recursion yes;
 	${fowarders}
