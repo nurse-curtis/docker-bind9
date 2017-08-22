@@ -63,8 +63,8 @@ EOF
   cat <<EOF > "/etc/bind/named.conf.options"
 options {
 	directory "/var/cache/bind";
-        allow-recursion {${BIND9_RECURSION_ACCEPT}};
-        allow-query-cache {${BIND9_QUERY_CACHE_ACCEPT}};
+        allow-recursion {127.0.0.1};
+        allow-query-cache {127.0.0.1};
         allow-query {any;};
         recursion yes;
 	${fowarders}
